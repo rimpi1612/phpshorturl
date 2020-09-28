@@ -113,7 +113,7 @@
             return false;
         }
 
-        // UPDATE HIT STATUS
+        // UPDATE URL STATUS
         public function updateUrlStatus(){
             $sqlQuery = "UPDATE
                         ". $this->db_table ."
