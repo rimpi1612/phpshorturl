@@ -1,5 +1,5 @@
 
-		 <?php 
+<?php 
         include('header.php');
         include_once '../config/database.php';
         include_once '../models/ShortUrl.php';
@@ -22,8 +22,8 @@
                
             }
             $item->updateUrlStatus();
-		   }
-       ?>
+	}
+?>
      
          <!-- Page Content Start -->
          <!-- ================== -->
@@ -48,7 +48,7 @@
                                           <th>Short Link</th>
                                           <th>Link</th>
                                           <th>Hit Count</th>
-										  <th></th>
+					<th></th>
                                        </tr>
                                     </thead>
                                     <tbody>
@@ -56,7 +56,6 @@
                               $i = 1;
                                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                  extract($row);
-										?>
                                        <tr>
                                           <td><?php echo $i++;?></td>
                                           <td><?php echo $row['url_label']?></td>
@@ -66,8 +65,8 @@
                                           </td>
                                           <td><?php echo $row['long_url']?></td>
                                           <td><?php echo $row['hit_count']?></td>
-										  <td>
-										   <a href="?id=<?php echo $row['id']?>&type=delete">Delete</a>
+					 <td>
+					<a href="?id=<?php echo $row['id']?>&type=delete">Delete</a>
                                     <?php
                                        if($row['url_status']==1){
                                           ?>
@@ -82,7 +81,6 @@
                                  </td>
                                        </tr>
                                        <?php  } ?>
-                                       
                                     </tbody>
                                  </table>
                               </div>
@@ -92,7 +90,5 @@
                   </div>
                </div>
             </div>
-            
          </div>
-         
-		 <?php include('footer.php')?>
+	 <?php include('footer.php')?>
