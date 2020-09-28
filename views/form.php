@@ -1,11 +1,10 @@
-		 <?php 
+<?php 
        include('header.php');
        $message = '';
        if(isset($_GET['message'])) {
          $message = $_GET['message'];
        }
-       
-		 ?>
+?>
          <!-- Page Content Start -->
          <!-- ================== -->
          <div class="wraper container-fluid">
@@ -38,11 +37,11 @@
                               </div>
                            </div>
                            
-						         <div class="form-group m-b-0">
+			<div class="form-group m-b-0">
                               <div class="col-sm-offset-3 col-sm-9">
                                  <button type="submit" class="btn btn-info">Generate</button>
                               </div>
-                           </div>
+                        </div>
 
                            <div class="form-group">
                               <p class="col-sm-3" id = "msg"><?php echo $message;?></p>
